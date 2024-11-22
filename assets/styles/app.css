@@ -1,3 +1,6 @@
 body {
-    background-color: skyblue;
+    background-color: #222;
+    color: white;
 }
+
+.return-link {display:block;margin-top: 20px;}

@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+{% block title %}Top 30 najlepiej sprzedawanych leków
+{% endblock %}
+{% block body %}
+	<h1>Top 30 najlepiej sprzedawanych leków</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Nazwa leku</th>
+				<th>Ilość sprzedaży</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for order in medicines %}
+				<tr>
+					<td>{{ loop.index }}</td>
+					<td>{{ order.product }}</td>
+					<td>{{ order.salesCount }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<a href="{{ path("home") }}" class="return-link">Powrót</a>
+{% endblock %}

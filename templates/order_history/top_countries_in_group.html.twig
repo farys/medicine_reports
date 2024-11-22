@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+{% block title %}Top kraje w grupie
+{% endblock %}
+{% block body %}
+	<h1>Top kraje w grupie</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Grupa klientów</th>
+				<th>Kraj</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for row in countries %}
+				<tr>
+					<td>{{ row.customer_group }}</td>
+					<td>{{ row.countries }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<a href="{{ path("home") }}" class="return-link">Powrót</a>
+{% endblock %}

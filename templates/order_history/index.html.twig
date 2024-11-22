@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+{% block title %}Strona główna
+{% endblock %}
+{% block body %}
+	<h1>Wczytaj plik z historią sprzedaży</h1>
+	{% for message in app.flashes('success') %}
+		<div class="alert alert-success">
+			{{ message }}
+		</div>
+	{% endfor %}
+	{% for message in app.flashes('error') %}
+		<div class="alert alert-error">
+			{{ message }}
+		</div>
+	{% endfor %}
+	<form action="{{ path('order_history_store') }}" method="post" enctype="multipart/form-data">
+		<label for="history_file">Wybierz plik CSV:</label>
+		<input type="file" name="history_file" id="history_file" accept=".csv, .json, .ldif">
+		<button type="submit">Wyślij</button>
+	</form>
+<h2>Rekordów w bazie</h2>
+<div class="reports">{{ totalCount }}</div>
+	<h2>Raporty:</h2>
+	<div class="reports">
+		<ul>
+			<li><a href="{{ path('top_selling_medicines') }}">Top 30 sprzedawanych.</a></li>
+			<li><a href="{{ path('top_countries_in_group') }}">Najpopularniejsze kraje w grupie klientów.</a></li>
+			<li><a href="{{ path('top_sources_in_customer_status') }}">Najpopularniejsze źródło dla stanu cywilnego.</a></li>
+			<li><a href="{{ path('total_consonants') }}">Liczba spółgłosek w bazie.</a></li>
+		</ul>
+	</div>
+
+{% endblock %}

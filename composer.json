@@ -13,6 +13,7 @@
         "doctrine/orm": "^3.3",
         "phpdocumentor/reflection-docblock": "^5.6",
         "phpstan/phpdoc-parser": "^2.0",
+        "smalot/ldap": "^0.4.0",
         "symfony/asset": "7.1.*",
         "symfony/asset-mapper": "7.1.*",
         "symfony/console": "7.1.*",
@@ -43,7 +44,8 @@
         "symfony/web-link": "7.1.*",
         "symfony/yaml": "7.1.*",
         "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^2.12|^3.0",
+        "yokai/doctrine-value-object": "^0.2.0"
     },
     "config": {
         "allow-plugins": {

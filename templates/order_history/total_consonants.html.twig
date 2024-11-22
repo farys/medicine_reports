@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+{% block title %}Całkowita ilość spółgłosek
+{% endblock %}
+{% block body %}
+	<h1>Całkowita ilość spółgłosek</h1>
+
+	{{ totalConsonants }}
+	szt
+
+	<a href="{{ path("home") }}" class="return-link">Powrót</a>
+{% endblock %}

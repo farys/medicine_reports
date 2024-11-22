@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+{% block title %}Top stan cywilny w plikach
+{% endblock %}
+{% block body %}
+	<h1>Top stan cywilny w plikach</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Stan cywilny</th>
+				<th>Najpopularniejszy w pliku</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for row in customerStatuses %}
+				<tr>
+					<td>{{ row.customer_status }}</td>
+					<td>{{ row.sources }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<a href="{{ path("home") }}" class="return-link">Powrót</a>
+{% endblock %}
